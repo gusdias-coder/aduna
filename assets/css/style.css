@@ -225,8 +225,9 @@ button { font: inherit; }
 .footer-main { padding: 75px 0 72px; display: flex; align-items: flex-start; justify-content: space-between; gap: 50px; }
 .footer-brand img { width: 165px; height: auto; }
 .footer-brand p { color: #8c9bb1; font-size: .89rem; line-height: 1.6; margin: 22px 0 0; }
-.footer-instagram { display: inline-block; margin-top: 21px; color: #c3d4fa; font-size: .83rem; }
-.footer-instagram svg, .footer-bottom svg { display: inline-block; width: 1em; height: 1em; vertical-align: -.1em; }
+.footer-instagram { display: inline-flex; align-items: center; gap: .35em; margin-top: 21px; color: #c3d4fa; font-size: .83rem; }
+.footer-instagram svg, .footer-bottom svg { display: block; width: 1em; height: 1em; flex: 0 0 1em; }
+.footer-bottom > span:last-child { display: inline-flex; align-items: center; gap: .4em; }
 .footer-bottom svg { color: var(--blue-light); }
 .footer-instagram:hover { color: #fff; }
 .footer-links { display: grid; gap: 15px; min-width: 120px; }
