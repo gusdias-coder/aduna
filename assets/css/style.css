@@ -170,9 +170,8 @@ button { font: inherit; }
 /* SITE.ON */
 .sites { background: #fff; }
 .sites-layout { display: grid; grid-template-columns: .87fr 1.13fr; align-items: center; gap: clamp(50px,8vw,120px); margin-bottom: 100px; }
-.partner-label { display: flex; align-items: center; gap: 12px; font-size: .66rem; letter-spacing: .1em; color: var(--navy); margin-bottom: 27px; }
-.partner-mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--navy); color: #fff; font-size: 1rem; letter-spacing: -.06em; border-radius: 7px; }
-.partner-dot { color: #8eadff; }
+.partner-label { display: flex; align-items: center; gap: 16px; font-size: .66rem; letter-spacing: .1em; color: var(--navy); margin-bottom: 27px; }
+.partner-logo { display: block; width: 64px; height: 64px; flex: 0 0 64px; object-fit: contain; border-radius: 50%; background: #fff; box-shadow: 0 8px 24px rgba(8,31,78,.12); }
 .sites-copy .display-title { max-width: 11ch; }
 .sites-copy > p:not(.overline) { color: #5c6570; font-size: 1.05rem; line-height: 1.75; max-width: 51ch; margin: 27px 0; }
 .sites-copy > p strong { color: var(--navy); }
