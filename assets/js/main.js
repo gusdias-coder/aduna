@@ -1,161 +1,78 @@
-/* ==========================================================================
-   ADUNA — animações e interações
-   Depende de GSAP + ScrollTrigger (carregados no index.html).
-   Se o GSAP não carregar, o conteúdo continua visível (nada começa oculto).
-   ========================================================================== */
-
-(function () {
+/* Aduna: navegação e movimento progressivo, sem bibliotecas externas. */
+(() => {
   "use strict";
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  const header = document.querySelector(".site-header");
+  const menuButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-links");
+  const heroArt = document.querySelector(".hero-art");
+  const year = document.querySelector("#ano");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- Navbar: muda ao rolar ---------- */
-  const nav = document.querySelector(".navbar-aduna");
-  const onScroll = () => nav && nav.classList.toggle("is-scrolled", window.scrollY > 40);
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  function closeMenu({ restoreFocus = false } = {}) {
+    if (!header || !menuButton) return;
+    const wasOpen = header.classList.contains("is-open");
+    header.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir menu");
+    if (wasOpen && restoreFocus) menuButton.focus();
+  }
 
-  /* ---------- Fechar menu mobile ao clicar em link ---------- */
-  document.querySelectorAll(".navbar-aduna .nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      const collapse = document.querySelector(".navbar-collapse.show");
-      if (collapse && window.bootstrap) {
-        window.bootstrap.Collapse.getOrCreateInstance(collapse).hide();
-      }
+  if (menuButton && header && menu) {
+    menuButton.addEventListener("click", () => {
+      const open = !header.classList.contains("is-open");
+      if (!open) { closeMenu(); return; }
+      header.classList.add("is-open");
+      document.body.classList.add("menu-open");
+      menuButton.setAttribute("aria-expanded", "true");
+      menuButton.setAttribute("aria-label", "Fechar menu");
+      menu.querySelector("a")?.focus();
     });
-  });
-
-  /* ---------- Ano no rodapé ---------- */
-  const year = document.getElementById("ano");
-  if (year) year.textContent = new Date().getFullYear();
-
-  /* ---------- Brilho que segue o cursor nos cards ---------- */
-  if (finePointer) {
-    document.querySelectorAll(".service-card").forEach((card) => {
-      card.addEventListener("pointermove", (e) => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
-        card.style.setProperty("--my", `${e.clientY - r.top}px`);
-      });
+    menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeMenu()));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu({ restoreFocus: true });
+      if (event.key !== "Tab" || !header.classList.contains("is-open")) return;
+      const focusable = [...menu.querySelectorAll("a"), menuButton];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+    matchMedia("(min-width: 781px)").addEventListener("change", (event) => {
+      if (event.matches) closeMenu();
     });
   }
 
-  /* ---------- Botões magnéticos ---------- */
-  if (finePointer && !reduceMotion && window.gsap) {
-    document.querySelectorAll(".btn-magnetic").forEach((btn) => {
-      const strength = 0.25;
-      btn.addEventListener("pointermove", (e) => {
-        const r = btn.getBoundingClientRect();
-        const x = (e.clientX - (r.left + r.width / 2)) * strength;
-        const y = (e.clientY - (r.top + r.height / 2)) * strength;
-        gsap.to(btn, { x, y, duration: 0.4, ease: "power3.out" });
-      });
-      btn.addEventListener("pointerleave", () => {
-        gsap.to(btn, { x: 0, y: 0, duration: 0.8, ease: "elastic.out(1, 0.4)" });
-      });
-    });
+  let scheduled = false;
+  function syncScroll() {
+    const y = window.scrollY;
+    header?.classList.toggle("is-scrolled", y > 35);
+    if (heroArt && !reduceMotion.matches) {
+      heroArt.style.setProperty("--drift", `${Math.min(y, 950) * .14}px`);
+    }
+    scheduled = false;
   }
+  window.addEventListener("scroll", () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(syncScroll);
+  }, { passive: true });
+  syncScroll();
 
-  /* Demais animações exigem GSAP e movimento não reduzido */
-  if (!window.gsap || reduceMotion) return;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  /* ---------- Hero: revelação palavra por palavra ---------- */
-  const splitTargets = document.querySelectorAll("[data-split]");
-  splitTargets.forEach((el) => {
-    const words = el.textContent.trim().split(/\s+/);
-    el.innerHTML = words
-      .map((w) => `<span class="word-wrap"><span class="word">${w}</span></span>`)
-      .join(" ");
-  });
-
-  const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
-  heroTl
-    .from(".hero .eyebrow", { y: 20, opacity: 0, duration: 0.8 })
-    .from(".hero .word", { yPercent: 110, duration: 1.1, stagger: 0.08 }, "-=0.4")
-    .from(".hero .lead-text", { y: 30, opacity: 0, duration: 1 }, "-=0.7")
-    .from(".hero .hero-actions > *", { y: 24, opacity: 0, duration: 0.8, stagger: 0.12 }, "-=0.7")
-    .from(".abstract-hero", { scale: 0.85, opacity: 0, duration: 1.8 }, 0)
-    .from(".scroll-cue", { opacity: 0, duration: 1 }, "-=0.5");
-
-  /* ---------- Parallax nas formas abstratas (acompanham o scroll) ---------- */
-  gsap.to(".abstract-hero", {
-    yPercent: 28,
-    rotate: 14,
-    ease: "none",
-    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
-  });
-  gsap.to(".abstract-hero-b", {
-    yPercent: -40,
-    rotate: -10,
-    ease: "none",
-    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
-  });
-  gsap.utils.toArray(".abstract-banner").forEach((el) => {
-    gsap.to(el, {
-      yPercent: 30,
-      rotate: 18,
-      ease: "none",
-      scrollTrigger: { trigger: el.closest(".partner-banner"), start: "top bottom", end: "bottom top", scrub: true },
-    });
-  });
-
-  /* ---------- Títulos de seção: subida suave com máscara ---------- */
-  gsap.utils.toArray(".reveal-title").forEach((el) => {
-    gsap.from(el, {
-      y: 60,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
-    });
-  });
-
-  /* ---------- Blocos genéricos com [data-reveal] ---------- */
-  gsap.utils.toArray("[data-reveal]").forEach((el) => {
-    gsap.from(el, {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: { trigger: el, start: "top 88%" },
-    });
-  });
-
-  /* ---------- Cards em cascata ---------- */
-  ["#servicos .service-card", "#sites .site-card", ".steps .step"].forEach((sel) => {
-    const items = gsap.utils.toArray(sel);
-    if (!items.length) return;
-    gsap.from(items, {
-      y: 70,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.14,
-      scrollTrigger: { trigger: items[0], start: "top 85%" },
-    });
-  });
-
-  /* ---------- Chips de valores: entrada escalonada ---------- */
-  gsap.from(".value-chip", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 0.7,
-    ease: "back.out(1.6)",
-    stagger: 0.08,
-    scrollTrigger: { trigger: ".value-chip", start: "top 90%" },
-  });
-
-  /* ---------- Frase de destaque: revelação por linha ---------- */
-  gsap.utils.toArray(".quote-block").forEach((el) => {
-    gsap.from(el, {
-      x: -40,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out",
-      scrollTrigger: { trigger: el, start: "top 85%" },
-    });
-  });
+  // Conteúdo permanece visível quando JavaScript ou IntersectionObserver não estão disponíveis.
+  if (!reduceMotion.matches && "IntersectionObserver" in window) {
+    const elements = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries, self) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        self.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -45px 0px", threshold: .06 });
+    document.documentElement.classList.add("motion-ready");
+    elements.forEach((element) => observer.observe(element));
+    document.documentElement.classList.add("hero-animated");
+  }
 })();

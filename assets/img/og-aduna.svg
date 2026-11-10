@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><radialGradient id="bg" cx=".9" cy=".5" r=".78"><stop stop-color="#173a80"/><stop offset="1" stop-color="#070d19"/></radialGradient><radialGradient id="orb" cx=".27" cy=".2" r=".8"><stop stop-color="#a2c2ff"/><stop offset=".16" stop-color="#548df2"/><stop offset=".55" stop-color="#0e3275"/><stop offset="1" stop-color="#030a17"/></radialGradient><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8caff"/><stop offset=".5" stop-color="#103a89"/><stop offset="1" stop-color="#9aafff"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".85"><ellipse cx="980" cy="310" rx="300" ry="170" transform="rotate(-33 980 310)" fill="none" stroke="url(#ring)" stroke-width="63"/><circle cx="965" cy="315" r="152" fill="url(#orb)"/><ellipse cx="965" cy="315" rx="320" ry="180" transform="rotate(55 965 315)" fill="none" stroke="#6c98eb" stroke-width="19" opacity=".5"/></g>
+  <rect x="67" y="67" width="42" height="3" fill="#8bb3ff"/>
+  <text x="124" y="74" font-family="Arial,Helvetica,sans-serif" font-size="18" letter-spacing="5" fill="#aac4f8">ADUNA · MARKETING ESTRATÉGICO</text>
+  <text x="68" y="240" font-family="Arial,Helvetica,sans-serif" font-size="75" font-weight="bold" letter-spacing="-5" fill="#fff">Marketing com</text>
+  <text x="68" y="325" font-family="Georgia,serif" font-size="89" font-style="italic" fill="#afc9ff">intenção.</text>
+  <text x="68" y="413" font-family="Arial,Helvetica,sans-serif" font-size="75" font-weight="bold" letter-spacing="-5" fill="#fff">Estratégia com</text>
+  <text x="68" y="504" font-family="Georgia,serif" font-size="89" font-style="italic" fill="#afc9ff">direção.</text>
+  <rect x="68" y="556" width="1056" height="1" fill="#5371b7" opacity=".7"/>
+  <text x="68" y="593" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="3" fill="#c4d3f0">PROPÓSITO · CONEXÃO · ESTRATÉGIA</text>
+</svg>

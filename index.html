@@ -3,391 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
-  <title>Aduna | Marketing estratégico — Marketing com intenção. Estratégia com direção.</title>
-  <meta name="description" content="A Aduna é uma agência de marketing estratégico: gestão de redes sociais, captação e edição de vídeos, tráfego pago e sites para pequenos negócios com a Site.on.">
-  <meta name="keywords" content="marketing estratégico, gestão de redes sociais, edição de vídeos, captação de vídeos, tráfego pago, sites para pequenos negócios, Porto Alegre">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://SEU-USUARIO.github.io/aduna-site/">
-  <meta name="theme-color" content="#050505">
-
-  <!-- Open Graph / redes sociais -->
+  <meta name="theme-color" content="#070d19">
+  <meta name="description" content="Aduna é uma agência de marketing estratégico especializada em gestão de redes sociais, captação e edição de vídeos e tráfego pago. Marketing com intenção, estratégia com direção.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Aduna — Marketing com intenção. Estratégia com direção.</title>
+  <!-- URL planejada: atualize se o repositório ou domínio for diferente. -->
+  <link rel="canonical" href="https://gusdias-coder.github.io/aduna/">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/img/logo-azul.png">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Aduna">
   <meta property="og:title" content="Aduna — Marketing com intenção. Estratégia com direção.">
-  <meta property="og:description" content="Estratégia, conteúdo em vídeo e tráfego pago para marcas ambiciosas.">
-  <meta property="og:url" content="https://SEU-USUARIO.github.io/aduna-site/">
-  <meta property="og:image" content="https://SEU-USUARIO.github.io/aduna-site/assets/img/logo-branca.png">
-  <meta property="og:locale" content="pt_BR">
-
-  <link rel="icon" type="image/png" href="assets/img/logo-azul.png">
-
-  <!-- Dados estruturados (schema.org) -->
+  <meta property="og:description" content="Estratégia, conteúdo em vídeo e performance para marcas que querem comunicar com propósito.">
+  <meta property="og:url" content="https://gusdias-coder.github.io/aduna/">
+  <meta property="og:image" content="https://gusdias-coder.github.io/aduna/assets/img/og-aduna.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Aduna",
-    "alternateName": "Aduna Marketing Estratégico",
-    "description": "Agência de marketing estratégico: gestão de redes sociais, captação e edição de vídeos, tráfego pago e sites para pequenos negócios.",
-    "slogan": "Marketing com intenção. Estratégia com direção.",
-    "url": "https://SEU-USUARIO.github.io/aduna-site/",
-    "logo": "https://SEU-USUARIO.github.io/aduna-site/assets/img/logo-azul.png",
-    "areaServed": "BR",
-    "knowsAbout": ["Marketing estratégico", "Gestão de redes sociais", "Edição de vídeos", "Tráfego pago", "Criação de sites"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços Aduna",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestão de redes sociais" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Captação e produção de vídeos" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Edição de vídeos" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tráfego pago" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sites institucionais, landing pages e catálogos digitais (Site.on)" } }
-      ]
-    },
-    "sameAs": [
-      "https://www.instagram.com/SEU_INSTAGRAM"
-    ]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Aduna","alternateName":"Aduna Marketing Estratégico","url":"https://gusdias-coder.github.io/aduna/","logo":"https://gusdias-coder.github.io/aduna/assets/img/logo-azul.png","telephone":"+55 51 99478-7320","sameAs":["https://www.instagram.com/aduna_maketing/"],"description":"Agência de marketing estratégico com serviços de gestão de redes sociais, produção e edição de vídeos e tráfego pago.","slogan":"Marketing com intenção. Estratégia com direção."}
   </script>
-
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5.3.3 (versão fixada) e ícones -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- Estilo da marca -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-orbit.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <noscript><style>@media(max-width:780px){.site-header{position:relative}.header-inner{height:auto;align-items:flex-start;padding:18px 0;flex-wrap:wrap}.nav-links{position:static;min-height:auto;flex:1 0 100%;display:flex;opacity:1;visibility:visible;transform:none;padding:10px 0;background:transparent}.nav-links a{font-size:1rem;padding:10px 0}.menu-toggle{display:none}.hero-inner{padding-top:0}}</style></noscript>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbar-aduna" aria-label="Navegação principal">
-    <div class="container">
-      <a class="navbar-brand" href="#inicio" aria-label="Aduna — início">
-        <img src="assets/img/logo-branca.png" alt="Aduna Marketing Estratégico">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sites">Sites</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-            <a class="btn-aduna btn-primary-aduna btn-magnetic" href="#contato">Vamos conversar</a>
-          </li>
-        </ul>
-      </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M5 19 19 5M7 5h12v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="site-header" id="topo">
+    <div class="header-inner shell">
+      <a class="brand" href="#inicio" aria-label="Aduna — início"><img src="assets/img/logo-branca.png" width="740" height="307" alt="Aduna Marketing Estratégico"></a>
+      <nav class="nav-links" id="menu-principal" aria-label="Navegação principal"><a href="#sobre">A Aduna</a><a href="#servicos">Serviços</a><a href="#metodo">Nossa visão</a><a href="#sites">Sites</a><a class="nav-mobile-contact" href="#contato">Contato</a></nav>
+      <a class="header-contact" href="https://wa.me/5551994787320?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Aduna%20e%20quero%20conversar%20sobre%20marketing." target="_blank" rel="noopener noreferrer">Vamos conversar <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button>
     </div>
-  </nav>
+  </header>
 
-  <main>
-
-    <!-- ================= HERO ================= -->
-    <header id="inicio" class="hero">
-      <!-- Formas abstratas (movimento com o scroll) -->
-      <svg class="abstract abstract-hero" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#1b4fa8" stop-opacity="0.9"/>
-            <stop offset="0.6" stop-color="#082c62" stop-opacity="0.6"/>
-            <stop offset="1" stop-color="#050505" stop-opacity="0"/>
-          </linearGradient>
-          <linearGradient id="gB" x1="1" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#3f6fc4" stop-opacity="0.5"/>
-            <stop offset="1" stop-color="#082c62" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <path d="M400 60c170 0 300 120 300 280S570 740 400 740 100 620 100 460 230 60 400 60z" fill="url(#gA)"/>
-        <path d="M150 420c60-160 220-260 360-200s180 210 120 340-220 160-340 90S100 560 150 420z" fill="none" stroke="#3f6fc4" stroke-opacity="0.55" stroke-width="1.5"/>
-        <path d="M60 330C200 250 300 430 460 360S680 220 760 300" fill="none" stroke="#7fa6ef" stroke-opacity="0.45" stroke-width="1.2"/>
-        <path d="M80 480C220 400 340 560 500 490S700 380 780 440" fill="none" stroke="#7fa6ef" stroke-opacity="0.3" stroke-width="1"/>
-        <circle cx="610" cy="210" r="90" fill="url(#gB)"/>
-      </svg>
-      <svg class="abstract abstract-hero-b" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-        <path d="M300 40c150 0 260 110 260 250S450 560 300 560 40 450 40 290 150 40 300 40z" fill="url(#gB)"/>
-        <path d="M120 300c40-110 160-170 260-120s140 170 90 250-170 110-250 60S90 390 120 300z" fill="none" stroke="#3f6fc4" stroke-opacity="0.4" stroke-width="1.2"/>
-      </svg>
-
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-lg-9 col-xl-8">
-            <span class="eyebrow">Agência de marketing estratégico</span>
-            <h1 class="display mb-4" data-split>Marketing com intenção. Estratégia com direção.</h1>
-            <p class="lead-text mb-5">
-              Ajudamos marcas ambiciosas a fortalecer seu posicionamento digital, ganhar visibilidade e atrair oportunidades com estratégia e conteúdo em vídeo.
-            </p>
-            <div class="hero-actions d-flex flex-wrap gap-3">
-              <a class="btn-aduna btn-primary-aduna btn-magnetic" href="#contato">Agendar conversa <i class="bi bi-arrow-right"></i></a>
-              <a class="btn-aduna btn-ghost-aduna btn-magnetic" href="#servicos">Ver serviços</a>
-            </div>
-          </div>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-art" aria-hidden="true"><img src="assets/img/hero-orbit.svg" width="820" height="820" alt="" fetchpriority="high"></div>
+      <div class="hero-inner shell">
+        <div class="hero-copy">
+          <div class="kicker kicker-light"><span class="kicker-line"></span> Agência de marketing estratégico <span class="kicker-star">✳</span></div>
+          <h1 id="titulo-principal" class="hero-title"><span class="hero-title-line">Marketing com</span> <span class="hero-title-line hero-emphasis">intenção<span class="period">.</span></span> <span class="hero-title-line">Estratégia com</span> <span class="hero-title-line hero-emphasis">direção<span class="period">.</span></span></h1>
+          <p class="hero-description">Para marcas que não querem apenas aparecer. Querem <strong>ser lembradas pelo que representam.</strong></p>
+          <div class="hero-actions"><a class="pill-button button-light" href="https://wa.me/5551994787320?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Aduna%20e%20quero%20conversar%20sobre%20marketing." target="_blank" rel="noopener noreferrer">Vamos conversar <span class="button-icon"><svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></span></a><a class="text-button text-button-light" href="#servicos">Explore os serviços <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
         </div>
-      </div>
-    </header>
-
-    <!-- ================= SOBRE ================= -->
-    <section id="sobre" class="section-pad section-light">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6">
-            <span class="eyebrow reveal-title">Sobre a Aduna</span>
-            <h2 class="display reveal-title mb-4" style="font-size: clamp(2rem, 4.4vw, 3.6rem);">
-              Estratégia primeiro. <span class="accent">Conteúdo que conecta.</span>
-            </h2>
-            <p class="lead-text" data-reveal>
-              A Aduna é uma agência de marketing estratégico que ajuda marcas ambiciosas a fortalecer seu posicionamento digital, ganhar visibilidade e atrair oportunidades através de estratégias e conteúdos em vídeo.
-            </p>
-          </div>
-          <div class="col-lg-5 offset-lg-1">
-            <div class="d-flex flex-wrap gap-3 mb-5" aria-label="Valores da Aduna">
-              <span class="value-chip"><i class="bi bi-bullseye"></i> Propósito</span>
-              <span class="value-chip"><i class="bi bi-gem"></i> Excelência</span>
-              <span class="value-chip"><i class="bi bi-people"></i> Conexão</span>
-              <span class="value-chip"><i class="bi bi-compass"></i> Estratégia</span>
-            </div>
-            <blockquote class="quote-block mb-0" data-reveal>
-              “Marketing com intenção. Estratégia com direção.”
-            </blockquote>
-          </div>
-        </div>
+        <div class="hero-bottom"><span>PROPÓSITO <span class="dot">·</span> CONEXÃO <span class="dot">·</span> RESULTADO</span><a href="#sobre" class="scroll-indicator">Role para descobrir <span class="scroll-track"></span></a><span>01 / 05</span></div>
       </div>
     </section>
 
-    <!-- ================= SERVIÇOS ================= -->
-    <section id="servicos" class="section-pad section-dark">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-8">
-            <span class="eyebrow reveal-title">Nossos serviços</span>
-            <h2 class="display reveal-title mb-4" style="font-size: clamp(2rem, 4.4vw, 3.6rem);">
-              Do planejamento à <span class="accent">tela do cliente.</span>
-            </h2>
-            <p class="lead-text" data-reveal>
-              Quatro frentes que trabalham juntas: a estratégia define o caminho, o conteúdo em vídeo ganha atenção e o tráfego pago amplia o alcance.
-            </p>
-          </div>
+    <section class="about section-pad" id="sobre" aria-labelledby="sobre-titulo"><div class="shell">
+      <div class="section-meta reveal"><span class="section-index">01 / QUEM SOMOS</span><span class="section-rule"></span><span class="section-side">MARCA COM IDENTIDADE</span></div>
+      <div class="about-grid"><div class="about-heading reveal"><p class="overline">O pensamento por trás da criação</p><h2 id="sobre-titulo" class="display-title">Não é sobre <em>postar mais.</em><br>É sobre <span class="navy-text">significar mais.</span></h2></div><div class="about-copy reveal"><p class="large-body">Somos a <strong>Aduna</strong>, uma agência de marketing estratégico para marcas ambiciosas que querem fortalecer sua presença digital com intenção.</p><p>Unimos posicionamento, gestão de redes sociais, produção de conteúdo em vídeo e tráfego pago para transformar comunicação em oportunidades reais de conexão.</p><a class="underlined-link" href="#servicos">Descubra nossas soluções <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a></div></div>
+      <div class="about-values reveal">
+        <div class="value-chips" aria-label="Valores da Aduna">
+          <span class="value-chip"><span aria-hidden="true"></span>Propósito</span>
+          <span class="value-chip"><span aria-hidden="true"></span>Excelência</span>
+          <span class="value-chip"><span aria-hidden="true"></span>Conexão</span>
+          <span class="value-chip"><span aria-hidden="true"></span>Estratégia</span>
         </div>
-
-        <div class="row g-4">
-          <div class="col-md-6">
-            <article class="service-card">
-              <span class="num">01</span>
-              <h3>Gestão de redes sociais</h3>
-              <ul>
-                <li>Planejamento estratégico de conteúdo.</li>
-                <li>Organização do calendário editorial.</li>
-                <li>Estratégia de posicionamento digital.</li>
-                <li>Gestão e acompanhamento dos perfis.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="service-card">
-              <span class="num">02</span>
-              <h3>Captação e produção de vídeos</h3>
-              <ul>
-                <li>Captação presencial de vídeos com celular.</li>
-                <li>Produção de Reels, Stories e vídeos institucionais.</li>
-                <li>Vídeos comerciais para empresas e profissionais.</li>
-                <li>Direção e orientação durante as gravações.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="service-card">
-              <span class="num">03</span>
-              <h3>Edição de vídeos</h3>
-              <ul>
-                <li>Edição de Reels e cortes para redes sociais.</li>
-                <li>Legendas e elementos de edição.</li>
-                <li>Edição de vídeos comerciais e institucionais.</li>
-                <li>Adaptação de vídeos para cada plataforma.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="service-card">
-              <span class="num">04</span>
-              <h3>Tráfego pago</h3>
-              <ul>
-                <li>Planejamento e criação de campanhas.</li>
-                <li>Configuração e gestão de anúncios patrocinados.</li>
-                <li>Monitoramento e otimização contínua.</li>
-                <li>Análise de resultados.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <p class="mt-5 mb-0 small" style="color: var(--muted-light);" data-reveal>
-          <i class="bi bi-info-circle me-1"></i>
-          A Aduna não é uma agência de design gráfico. Não criamos logotipos, artes ou identidade visual.
-        </p>
+        <blockquote class="value-quote">“Marketing com intenção.<br><em>Estratégia com direção.</em>”</blockquote>
       </div>
-    </section>
+    </div></section>
 
-    <!-- ================= SITES (SITE.ON) ================= -->
-    <section id="sites" class="section-pad section-light">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-8">
-            <span class="eyebrow reveal-title">Sites para o seu negócio</span>
-            <h2 class="display reveal-title mb-4" style="font-size: clamp(2rem, 4.4vw, 3.6rem);">
-              Um endereço para <span class="accent">sua história.</span>
-            </h2>
-            <p class="lead-text" data-reveal>
-              Sites personalizados para pequenos negócios apresentarem sua marca, divulgarem serviços e produtos e facilitarem o contato com clientes pelo WhatsApp. Com a Site.on, cada projeto é acompanhado da conversa inicial à publicação.
-            </p>
-          </div>
-        </div>
-
-        <div class="row g-4 mb-5">
-          <div class="col-md-6 col-xl-4">
-            <article class="site-card">
-              <div class="icon-ring"><i class="bi bi-browser-chrome"></i></div>
-              <h3>Site institucional</h3>
-              <p>Um site para apresentar sua empresa e reunir as principais informações do negócio em um único endereço.</p>
-              <ul>
-                <li>História e apresentação da empresa.</li>
-                <li>Serviços e diferenciais.</li>
-                <li>Fotos, trabalhos e atendimento.</li>
-                <li>Chamadas para o WhatsApp.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-4">
-            <article class="site-card">
-              <div class="icon-ring"><i class="bi bi-megaphone"></i></div>
-              <h3>Landing page</h3>
-              <p>Uma página dedicada a um serviço, produto, programa ou campanha, com um caminho claro até o contato.</p>
-              <ul>
-                <li>Explicação da oferta e seus benefícios.</li>
-                <li>Imagens e informações para a decisão.</li>
-                <li>Respostas às principais dúvidas.</li>
-                <li>Botões para pedir orçamento pelo WhatsApp.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-4">
-            <article class="site-card">
-              <div class="icon-ring"><i class="bi bi-bag"></i></div>
-              <h3>Catálogo digital</h3>
-              <p>Uma vitrine online para organizar produtos e facilitar consultas, pedidos de informação e atendimento.</p>
-              <ul>
-                <li>Produtos organizados por categorias.</li>
-                <li>Fotografias e descrições.</li>
-                <li>Coleções e linhas de produtos.</li>
-                <li>Consulta de disponibilidade pelo WhatsApp.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <div class="row g-4 steps mb-5">
-          <div class="col-md-6 col-lg">
-            <div class="step"><div class="step-n">01</div><h4>Conversa inicial</h4><p>Entendemos o negócio, o público e o objetivo do site.</p></div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="step"><div class="step-n">02</div><h4>Proposta</h4><p>Definimos funcionalidades, investimento, prazo e condições.</p></div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="step"><div class="step-n">03</div><h4>Design e desenvolvimento</h4><p>Organizamos o conteúdo e construímos o site.</p></div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="step"><div class="step-n">04</div><h4>Revisão</h4><p>Você avalia e envia o feedback para os ajustes combinados.</p></div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="step"><div class="step-n">05</div><h4>Publicação</h4><p>Conferimos a navegação e os contatos e colocamos o site no ar.</p></div>
-          </div>
-        </div>
-
-        <div class="partner-banner" data-reveal>
-          <svg class="abstract-banner" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-            <path d="M300 40c150 0 260 110 260 250S450 560 300 560 40 450 40 290 150 40 300 40z" fill="none" stroke="#7fa6ef" stroke-width="1.5"/>
-            <path d="M120 300c40-110 160-170 260-120s140 170 90 250-170 110-250 60S90 390 120 300z" fill="#3f6fc4" fill-opacity="0.35"/>
-          </svg>
-          <div class="row align-items-center g-4 position-relative">
-            <div class="col-lg-8">
-              <h3 class="fw-bold mb-3" style="letter-spacing: -0.02em;">Seu negócio já tem uma história. Vamos dar um endereço a ela?</h3>
-              <p class="mb-0" style="color: #c9d4ea; max-width: 58ch;">
-                Conte o que sua empresa faz e o que deseja alcançar. Se já tiver logotipo, fotos, textos ou referências, esses materiais ajudam a orientar o projeto.
-              </p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-              <a class="btn-aduna btn-primary-aduna btn-magnetic" href="https://gusdias-coder.github.io/site-on-portfolio/" target="_blank" rel="noopener">
-                Solicitar proposta de site <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+    <section class="services section-pad" id="servicos" aria-labelledby="servicos-titulo"><div class="shell">
+      <div class="section-meta section-meta-dark reveal"><span class="section-index">02 / SOLUÇÕES</span><span class="section-rule"></span><span class="section-side">DO PLANO À PRÁTICA</span></div>
+      <div class="section-intro services-intro"><div class="reveal"><p class="overline overline-light">O que fazemos</p><h2 id="servicos-titulo" class="display-title">Ideias com direção.<br><em>Conteúdo com impacto.</em></h2></div><p class="reveal">Cada marca tem uma voz. Construímos a estratégia e o conteúdo para que ela chegue às pessoas certas.</p></div>
+      <div class="service-list">
+        <article class="service-row reveal" aria-labelledby="servico-social"><span class="service-number">01 /</span><div class="service-main"><h3 id="servico-social">Gestão de redes sociais</h3><p>Presença digital consistente, com estratégia por trás de cada publicação.</p><ul class="service-tags"><li>Planejamento editorial</li><li>Posicionamento</li><li>Stories e Reels</li><li>Acompanhamento dos perfis</li></ul></div><span class="service-icon" aria-hidden="true">↗</span></article>
+        <article class="service-row reveal" aria-labelledby="servico-captacao"><span class="service-number">02 /</span><div class="service-main"><h3 id="servico-captacao">Captação e produção de vídeos</h3><p>Conteúdo que mostra a essência do seu negócio em movimento.</p><ul class="service-tags"><li>Captação presencial com celular</li><li>Reels e Stories</li><li>Vídeos comerciais</li><li>Direção nas gravações</li></ul></div><span class="service-icon" aria-hidden="true">↗</span></article>
+        <article class="service-row reveal" aria-labelledby="servico-edicao"><span class="service-number">03 /</span><div class="service-main"><h3 id="servico-edicao">Edição de vídeos</h3><p>Ritmo, narrativa e acabamento para transformar gravações em comunicação.</p><ul class="service-tags"><li>Edição de Reels</li><li>Cortes e legendas</li><li>Vídeos institucionais</li><li>Adaptação por plataforma</li></ul></div><span class="service-icon" aria-hidden="true">↗</span></article>
+        <article class="service-row reveal" aria-labelledby="servico-trafego"><span class="service-number">04 /</span><div class="service-main"><h3 id="servico-trafego">Tráfego pago</h3><p>Campanhas planejadas para ampliar o alcance com acompanhamento e análise.</p><ul class="service-tags"><li>Estratégia de campanha</li><li>Configuração de anúncios</li><li>Otimização</li><li>Análise de resultados</li></ul></div><span class="service-icon" aria-hidden="true">↗</span></article>
       </div>
-    </section>
+    </div></section>
 
-    <!-- ================= CONTATO ================= -->
-    <section id="contato" class="section-pad section-dark">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6">
-            <span class="eyebrow reveal-title">Contato</span>
-            <h2 class="display reveal-title mb-4" style="font-size: clamp(2.2rem, 5vw, 4rem);">
-              Vamos <span class="accent">conversar?</span>
-            </h2>
-            <p class="lead-text" data-reveal>
-              Conte o desafio do seu negócio e a gente desenha o caminho juntos, com estratégia antes de qualquer conteúdo.
-            </p>
-          </div>
-          <div class="col-lg-5 offset-lg-1">
-            <!-- TROCAR: número real no formato 55 + DDD + número, sem espaços -->
-            <a class="contact-link mb-3 btn-magnetic" href="https://wa.me/5551000000000?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20marketing%20estrat%C3%A9gico." target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i>
-              <span><small>WhatsApp</small>Falar agora</span>
-            </a>
-            <!-- TROCAR: seu @ do Instagram -->
-            <a class="contact-link mb-3" href="https://www.instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener">
-              <i class="bi bi-instagram"></i>
-              <span><small>Instagram</small>@SEU_INSTAGRAM</span>
-            </a>
-            <!-- TROCAR: e-mail real -->
-            <a class="contact-link" href="mailto:contato@seudominio.com.br">
-              <i class="bi bi-envelope"></i>
-              <span><small>E-mail</small>contato@seudominio.com.br</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="statement" aria-labelledby="statement-titulo"><div class="statement-lines" aria-hidden="true"></div><div class="shell statement-inner"><span class="statement-label reveal">UMA IDEIA QUE NOS MOVE</span><h2 class="reveal" id="statement-titulo">Ser visto é bom.<br><em>Ser relevante é melhor.</em></h2><span class="statement-sign reveal">ADUNA <span>✳</span></span></div></section>
 
+    <section class="method section-pad" id="metodo" aria-labelledby="metodo-titulo"><div class="shell">
+      <div class="section-meta reveal"><span class="section-index">03 / NOSSA VISÃO</span><span class="section-rule"></span><span class="section-side">PENSAMENTO E EXECUÇÃO</span></div>
+      <div class="method-top"><div class="reveal"><p class="overline">Um jeito de pensar</p><h2 class="display-title" id="metodo-titulo">Boa comunicação <em>começa antes</em> da câmera.</h2></div><p class="reveal">Antes de criar, entendemos. Antes de publicar, direcionamos. Porque cada decisão precisa fazer sentido para sua marca.</p></div>
+      <div class="method-steps"><article class="method-step reveal"><span class="method-num">01</span><div class="method-symbol" aria-hidden="true">↗</div><h3>Entender</h3><p>Escutar os objetivos, conhecer a marca e identificar o que realmente importa comunicar.</p></article><article class="method-step reveal"><span class="method-num">02</span><div class="method-symbol" aria-hidden="true">✳</div><h3>Direcionar</h3><p>Organizar ideias, público, mensagens e formatos em uma estratégia coerente.</p></article><article class="method-step reveal"><span class="method-num">03</span><div class="method-symbol" aria-hidden="true">↗</div><h3>Construir</h3><p>Criar, publicar e acompanhar o conteúdo, com espaço para aprender e evoluir.</p></article></div>
+    </div></section>
+
+    <section class="sites section-pad" id="sites" aria-labelledby="sites-titulo"><div class="shell">
+      <div class="section-meta reveal"><span class="section-index">04 / EXPERIÊNCIA DIGITAL</span><span class="section-rule"></span><span class="section-side">ADUNA + SITE.ON</span></div>
+      <div class="sites-layout"><div class="sites-copy reveal"><p class="overline">Mais um ponto de conexão</p><div class="partner-label"><span class="partner-mark">S<span class="partner-dot">.</span></span> EM PARCERIA COM A SITE.ON</div><h2 class="display-title" id="sites-titulo">Uma presença que vai <em>além do feed.</em></h2><p>Com a <strong>Site.on</strong>, sua empresa pode ter um endereço digital próprio para apresentar serviços, organizar informações e facilitar o contato com clientes.</p><a href="https://gusdias-coder.github.io/site-on-portfolio/" target="_blank" rel="noopener noreferrer" class="pill-button button-dark">Conhecer a Site.on <span class="button-icon"><svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></span></a></div>
+        <div class="site-preview reveal" role="img" aria-label="Ilustração de uma página web com conteúdo organizado"><div class="preview-head"><span class="preview-dots"><i></i><i></i><i></i></span><span>SEU NEGÓCIO . DIGITAL</span><span class="preview-menu">MENU &nbsp; ↗</span></div><div class="preview-content"><span class="preview-kicker">PRESENÇA DIGITAL</span><div class="preview-title">Sua marca.<br><em>Seu espaço.</em></div><div class="preview-line"></div><span class="preview-caption">UM SITE QUE CONTA SUA HISTÓRIA.</span><div class="preview-orb" aria-hidden="true"></div></div><div class="preview-footer"><span>ESTRATÉGIA + DESIGN</span><span>01 / 03</span></div></div></div>
+      <div class="site-types" aria-label="Tipos de site oferecidos pela Site.on"><article class="site-type reveal"><span>01</span><h3>Site institucional</h3><p>Sua história, serviços, diferenciais e formas de contato em um só lugar.</p></article><article class="site-type reveal"><span>02</span><h3>Landing page</h3><p>Uma página com foco em uma oferta, campanha ou serviço específico.</p></article><article class="site-type reveal"><span>03</span><h3>Catálogo digital</h3><p>Produtos organizados para facilitar consultas e pedidos pelo WhatsApp.</p></article></div>
+      <p class="site-disclaimer">Os sites são desenvolvidos pela Site.on, de Gustavo Dias. Escopo, investimento, prazo e condições são definidos em proposta individual.</p>
+    </div></section>
+
+    <section class="contact section-pad" id="contato" aria-labelledby="contato-titulo"><div class="contact-glow" aria-hidden="true"></div><div class="shell contact-inner">
+      <div class="section-meta section-meta-dark reveal"><span class="section-index">05 / PRÓXIMOS PASSOS</span><span class="section-rule"></span><span class="section-side">A CONVERSA COMEÇA AQUI</span></div>
+      <div class="contact-grid"><div class="reveal"><p class="overline overline-light">Vamos construir a próxima história?</p><h2 class="display-title" id="contato-titulo">Sua marca merece <em>uma direção.</em></h2><p class="contact-description">Conte um pouco sobre sua marca, seus desafios e o que deseja alcançar. A conversa pode começar agora mesmo pelo WhatsApp.</p></div><aside class="contact-panel reveal" aria-label="Informações de contato"><span class="contact-panel-label">CONTATO ADUNA</span><span class="contact-panel-icon" aria-hidden="true">✳</span><p>Vamos conversar?</p><span>Chame a Aduna pelo WhatsApp para apresentar seu negócio e solicitar informações sobre os serviços.</span><a class="contact-whatsapp" href="https://wa.me/5551994787320?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Aduna%20e%20quero%20conversar%20sobre%20marketing." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a><small>+55 (51) 99478-7320</small><a class="contact-social" href="https://www.instagram.com/aduna_maketing/" target="_blank" rel="noopener noreferrer">Instagram: @aduna_maketing <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a><div class="contact-divider"></div><a href="https://gusdias-coder.github.io/site-on-portfolio/" target="_blank" rel="noopener noreferrer">Precisa de um site? Fale com a Site.on <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a></aside></div>
+    </div></section>
   </main>
-
-  <!-- ================= RODAPÉ ================= -->
-  <footer class="footer-aduna">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <img src="assets/img/logo-branca.png" alt="Aduna">
-      <p class="mb-0 text-center">Marketing com intenção. Estratégia com direção.</p>
-      <p class="mb-0">© <span id="ano">2026</span> Aduna. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Botão flutuante de WhatsApp -->
-  <!-- TROCAR: mesmo número do link de contato -->
-  <a class="wa-float" href="https://wa.me/5551000000000" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <!-- Scripts: Bootstrap (menu), GSAP e ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <footer class="site-footer"><div class="shell footer-main"><div class="footer-brand"><a href="#inicio" aria-label="Voltar ao início"><img src="assets/img/logo-branca.png" width="740" height="307" alt="Aduna Marketing Estratégico" loading="lazy"></a><p>Marketing com intenção.<br>Estratégia com direção.</p><a class="footer-instagram" href="https://www.instagram.com/aduna_maketing/" target="_blank" rel="noopener noreferrer">@aduna_maketing ↗</a></div><div class="footer-links"><span>NAVEGUE</span><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#metodo">Nossa visão</a><a href="#sites">Sites</a><a href="#contato">Contato</a></div><a class="back-top" href="#inicio" aria-label="Voltar ao topo"><svg aria-hidden="true"><use href="#icon-arrow-up"/></svg></a></div><div class="shell footer-bottom"><span>© <span id="ano">2026</span> Aduna. Todos os direitos reservados.</span><span>Feito com intenção. <span aria-hidden="true">✳</span></span></div></footer>
 </body>
 </html>
