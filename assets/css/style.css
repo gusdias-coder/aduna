@@ -54,7 +54,7 @@ button { font: inherit; }
 .kicker { display: flex; align-items: center; gap: 12px; }
 .kicker-light { color: #b8c8ec; }
 .kicker-line { display: inline-block; width: 33px; height: 1px; background: var(--blue-light); }
-.kicker-star { color: #fff; font-size: 1.2rem; margin-left: 7px; }
+.kicker-star { color: #fff; width: 1.2rem; height: 1.2rem; flex: 0 0 1.2rem; margin-left: 7px; }
 .section-meta { display: flex; align-items: center; gap: 22px; color: #627080; margin-bottom: 65px; font-size: .63rem; }
 .section-index { color: var(--navy); flex: 0 0 auto; }
 .section-rule { height: 1px; flex: 1; background: #ccd2d9; }
@@ -140,6 +140,7 @@ button { font: inherit; }
 .service-tags { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; margin: 0; list-style: none; }
 .service-tags li { padding: 9px 13px; border: 1px solid rgba(255,255,255,.22); border-radius: 99px; color: #c4d0e0; font-size: .74rem; }
 .service-icon { border: 1px solid rgba(255,255,255,.3); border-radius: 50%; width: 49px; height: 49px; display: grid; place-items: center; font-size: 1.4rem; transition: transform .35s, background .35s, color .35s; }
+.service-icon svg, .method-symbol svg, .contact-panel-icon svg { width: 1em; height: 1em; }
 .service-row:hover .service-icon { transform: rotate(45deg); background: #fff; color: var(--ink); }
 
 /* MANIFESTO */
@@ -151,7 +152,7 @@ button { font: inherit; }
 .statement h2 { font-size: clamp(3.45rem,7vw,8rem); font-weight: 650; line-height: 1.06; letter-spacing: -.07em; margin: 37px 0 60px; }
 .statement h2 em { color: #b6c9ff; }
 .statement-sign { display: flex; align-items: center; gap: 15px; font-weight: 800; font-size: .77rem; letter-spacing: .23em; }
-.statement-sign span { font-size: 1.5rem; color: #a8c0ff; }
+.statement-sign svg { width: 1.5rem; height: 1.5rem; color: #a8c0ff; }
 
 /* VISÃO */
 .method { background: #f0f2f3; }
@@ -179,7 +180,8 @@ button { font: inherit; }
 .preview-head { height: 48px; border-bottom: 1px solid rgba(255,255,255,.2); display: flex; align-items: center; justify-content: space-between; color: #a7bde7; font-size: .55rem; position: relative; z-index: 2; }
 .preview-dots { display: flex; gap: 5px; }
 .preview-dots i { width: 6px; height: 6px; border: 1px solid #8da4d9; border-radius: 50%; }
-.preview-menu { color: #fff; }
+.preview-menu { display: inline-flex; align-items: center; gap: .4em; color: #fff; }
+.preview-menu svg { width: 1em; height: 1em; }
 .preview-content { position: relative; min-height: 430px; padding: 75px 26px 45px; isolation: isolate; }
 .preview-kicker { color: #b4caf5; font-size: .6rem; }
 .preview-title { font-size: clamp(2.8rem,4.15vw,5.3rem); font-weight: 700; letter-spacing: -.07em; line-height: 1.04; margin-top: 42px; position: relative; z-index: 2; }
@@ -218,12 +220,14 @@ button { font: inherit; }
 .contact-divider { height: 1px; background: var(--line-dark); margin: 39px 0 26px; }
 .contact-panel a { display: flex; align-items: center; justify-content: space-between; gap: 18px; font-size: .84rem; font-weight: 650; color: #fff; }
 .contact-panel a:hover { color: #b5c9ff; }
-.contact-panel svg { width: 18px; height: 18px; flex: 0 0 18px; }
+.contact-panel a svg { width: 18px; height: 18px; flex: 0 0 18px; }
 .site-footer { background: #050911; color: #fff; border-top: 1px solid rgba(255,255,255,.1); }
 .footer-main { padding: 75px 0 72px; display: flex; align-items: flex-start; justify-content: space-between; gap: 50px; }
 .footer-brand img { width: 165px; height: auto; }
 .footer-brand p { color: #8c9bb1; font-size: .89rem; line-height: 1.6; margin: 22px 0 0; }
 .footer-instagram { display: inline-block; margin-top: 21px; color: #c3d4fa; font-size: .83rem; }
+.footer-instagram svg, .footer-bottom svg { display: inline-block; width: 1em; height: 1em; vertical-align: -.1em; }
+.footer-bottom svg { color: var(--blue-light); }
 .footer-instagram:hover { color: #fff; }
 .footer-links { display: grid; gap: 15px; min-width: 120px; }
 .footer-links span { font-size: .62rem; color: #7d8aa1; font-weight: 700; letter-spacing: .16em; margin-bottom: 5px; }
